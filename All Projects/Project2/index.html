@@ -11,7 +11,7 @@
     <!-- Select box of movie selector -->
     <div class="select-container">
         <label for="">Select your movie:</label>
-        <select id="Movie">
+        <select id="movie">
             <option value="10">Django Unchained</option>
             <option value="4">Sixth Sense</option>
             <option value="6">Snatch</option>
@@ -38,7 +38,10 @@
 
     <!-- Container for displaying screen and seating chart -->
     <div class="container">
-        <div class="screen"></div>
+        <div class="screen" id="screen">
+            <video controls src="video/Eagles.mp4" poster="video/images.jpg"></video>
+        </div>
+         <!-- <video //height="120px"; //width="100%"; src="https://youtu.be/mjF1rmSV1dM"></video>  -->
         <!-- Row 1 -->
         <div class="row">
             <div class="seat occupied"></div>
@@ -85,8 +88,8 @@
         </div>
         <!-- Row 5 -->
         <div class="row">
-            <div class="seat selected"></div>
-            <div class="seat selected"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
             <div class="seat"></div>
@@ -108,7 +111,7 @@
     </div>
     
     <!-- Total seats & price -->
-    <p class="totals">You've selected <span class="count">0</span> seats. Your total is $<span class="total">0</span></p>
+    <p class="totals">You've selected <span id="count">0</span> seats. Your total is $<span id="total">0</span></p>
    <script src="script.js"></script>
 </body>
 </html>

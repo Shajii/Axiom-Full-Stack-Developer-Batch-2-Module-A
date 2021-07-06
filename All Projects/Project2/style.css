@@ -5,7 +5,8 @@
 }
 
 body {
-    background-color: #222E50;
+    background-image: url('https://i.ytimg.com/vi/pl6JB7INYQw/maxresdefault.jpg');
+    ackground-color: #222E50;
     display: flex;
     flex-direction: column;
     color: white;
@@ -40,7 +41,7 @@ body {
 }
 
 .seat {
-    background-color: green;
+    background-color: yellow;
 }
 
 .seat.selected {
@@ -48,7 +49,7 @@ body {
 }
 
 .seat.occupied {
-    background-color: red;
+    background-color: orangered;
 }
 
 .seat:nth-of-type(2) {

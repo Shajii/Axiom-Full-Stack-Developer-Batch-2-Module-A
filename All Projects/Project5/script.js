@@ -7,14 +7,13 @@ const totalWealthBtn = document.getElementById('totalWealth');
 const main = document.getElementById('main');
 
 // User Array
-const userArray = [];
+var userArray = [];
 
 // function to call data
 function getData() {
     fetch('https://randomuser.me/api/')
     .then( res => res.json())
     .then(data => {
-        //user.push(data.results[0].name);
         const apiName = data.results[0].name;
         builtObject(apiName);
     })
@@ -23,7 +22,7 @@ function getData() {
 // Function to built an object
 function builtObject(apiName) {
     newUser = {name: `${apiName.first} ${apiName.last}`,
-        wealth: Math.floor(Math.random()*10000000)
+        wealth: Math.floor(Math.random()*1000000)
     };
     userArray.push(newUser);
     updateDom();
@@ -35,13 +34,27 @@ function updateDom(userData = userArray) {
     userData.forEach( user => {
         const divElement = document.createElement('div');
         divElement.classList.add('user');
-        divElement.innerHTML = `<strong>${user.name}</strong>${user.wealth}`;
+        divElement.innerHTML = `<strong>${user.name}</strong>${'$'} ${user.wealth.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}`;
         main.appendChild(divElement);
     })
 }
 
+// Event Listeners
+userBtn.addEventListener('click', getData);
 
+doubleWealthBtn.addEventListener('click',  () => {
+    userArray = userArray.map( user => {
+        return {...user, wealth:user.wealth*2}
+    })
+    updateDom();
+});
 
-getData();
-getData();
-getData();
+filterWealthBtn.addEventListener('click', () => {
+    userArray = userArray.filter(user => user.wealth > 1000000)
+    updateDom();
+})
+
+sortUserBtn.addEventListener('click', () => {
+    userArray = userArray.sort((a,b) => a.wealth - b.wealth)
+    updateDom();
+})

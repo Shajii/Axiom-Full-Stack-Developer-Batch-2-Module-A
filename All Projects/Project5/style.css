@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Fuggles', cursive;
+    font-family: 'Anton', sans-serif;
     background-color: rgb(37, 36, 36);
     display: flex;
     flex-direction: column;

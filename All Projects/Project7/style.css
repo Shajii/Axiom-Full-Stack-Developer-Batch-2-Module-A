@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+} 
+
+body {
+    background-color: rgb(51, 63, 87);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 15px;
+    overflow: hidden;
+}
+
+/* body h1 { 
+    height: 200px;
+}*/
+
+.hangman-container {
+    fill: transparent;
+    stroke-width: 10px;
+    stroke: whitesmoke;
+    stroke-linecap: round;
+    height: 400px;
+    width: 1400px;
+}
+
+.hangman-part {
+    display: none;
+}
+
+.answer {
+    display: flex;
+    margin-top: 40px;
+
+}
+
+.word {
+    border-bottom: 2px solid;
+    width: 20px;
+    font-size: 20px;
+    margin: 0 10px;
+    font-size: 30px;
+}
+
+.popup {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    margin-left: 90px;
+    bottom: 180px;
+    background-color: tomato;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 50px;
+}
+
+.popup button {
+    background-color: yellow;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.incorrect-guesses {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+}
+
+.notification {
+    background-color: rgb(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 0;
+    margin-top: 40px;
+}

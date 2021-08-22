@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project 7</title>
+</head>
+<body>
+    <h1>Hangman</h1>
+    <!-- Container -->
+    <div class="container">
+            <svg class="hangman-container" id="hangman-container" height="400" width="300">
+                <line x1='60' y1='20' x2='200' y2='20'/>
+                <line x1='60' y1='20' x2='60' y2='390'/>
+                <line x1='20' y1='390' x2='100' y2='390'/>
+                <line x1='200' y1='20' x2='200' y2='80'/>
+                <circle cx="200" cy="110" r="30" class="hangman-part"/>
+                <line x1='200' y1='140' x2='200' y2='230' class="hangman-part"/>
+                <line x1='200' y1='180' x2='150' y2='230' class="hangman-part"/>
+                <line x1='200' y1='180' x2='250' y2='230' class="hangman-part"/>
+                <line x1='200' y1='230' x2='200' y2='250' class="hangman-part"/>
+                <line x1='200' y1='250' x2='160' y2='320' class="hangman-part"/>
+                <line x1='200' y1='250' x2='240' y2='320' class="hangman-part"/>
+            </svg>
+    <!-- Incorrect Guesses -->
+    </div>
+    <div class="incorrect-guesses">
+        <!-- <h3>Incorrect Guesses</h3>
+        <p>a,b,c,d</p> -->  
+    </div>
+    <!-- Answer -->
+    <div class="answer" id="answer">
+        <!-- <div class="word">A</div>
+        <div class="word">L</div>
+        <div class="word">E</div>
+        <div class="word">X</div> -->
+    </div>
+    <!-- Final Popup -->
+    <div class="popup" id="popup">
+        <!-- <h1>You Won! Want To Play Again?</h1>
+        <button>Play</button> -->
+    </div>
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <!-- <h3>You've already guessed this letter</h3> -->
+    </div>
+</body>
+</html>

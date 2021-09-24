@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* 
+img {
+    width: 15%;
+    border-radius: 50%;
+    height: auto;
+} */
+
+body {
+    background-color: rgb(112, 65, 131);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100mvh;
+    border: 0;
+}
+ 
+.container {
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    padding: 20px;
+}
+
+.image {
+    position: relative;
+    width: 150px;
+}
+
+.image img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation-timing-function: linear;
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+.image.play img {
+    animation-play-state: running;
+}
+
+.info {
+    background-color: gray;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 62px;
+    right: 0.9px;
+    width: 280px;
+    padding: 0;
+    font-weight: bold;
+    transition: transform 1s ease-in, opacity 1s ease-in;
+    opacity: 0;
+} 
+
+.info.play {
+    opacity: 1;
+}
+
+.progress {
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 5px;
+    width: 50%;
+    margin-left: 130px;
+    
+}
+
+
+.progress-bar {
+    background-color: #7f95a8;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+h1{
+    margin-bottom: 100px;
+}
+
+p {
+    margin-left: 130px;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    } 
+    to {
+        transform: rotate(360deg);
+    }
+} 

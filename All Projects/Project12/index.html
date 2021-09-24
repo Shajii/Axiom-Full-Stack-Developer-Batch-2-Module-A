@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 12</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="btn-setting" id="settings">
+        <i class="fas fa-tools fa-2x"></i>
+    </button>
+
+    <div class="settings" id="settings">
+        <!-- Form to set settings -->
+        <form id="form">
+            <!-- Difficulty Settings -->
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </form>
+    </div>
+
+    <!-- Container -->
+    <div class="container" id="container">
+        <h2>Fast Typing Game</h2>
+        <p>Type this word as fast as you can:</p>
+        <h1 id="word">Name</h1>
+        <input id="field" type="text" placeholder="Please type here" autocomplete="off">
+
+        <div id="timer" class="time">Time Remaining: 10s</div>
+        <div id="score" class="score">Score: 0</div>
+    </div>
+
+    <div class="game-over" id="game-over"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
